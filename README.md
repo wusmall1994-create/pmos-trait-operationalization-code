@@ -1,5 +1,10 @@
 # PMOS trait operationalization: statistical analysis code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22655208.svg)](https://doi.org/10.5281/zenodo.22655208)
+
+Archived release DOI: [10.5281/zenodo.22655208](https://doi.org/10.5281/zenodo.22655208).
+The concept DOI for all versions is [10.5281/zenodo.22655207](https://doi.org/10.5281/zenodo.22655207).
+
 This repository contains the statistical analysis code for a cross-sectional
 study of androgen, anti-Mullerian hormone (AMH), adiposity, and metabolic traits.
 It covers NHANES August 2021-August 2023, NHANES 2017-March 2020, and a
@@ -89,4 +94,3 @@ not redistribute either dataset.
 
 Code is released under the MIT License. Dataset terms remain governed by NCHS
 and ICPSR and are not altered by this software license.
-
