@@ -1,0 +1,33 @@
+domain,canonical_variable,source_variable,unit_or_coding,derivation
+NHANES,participant_id,SEQN,identifier,Merge key used only in local memory
+NHANES,sex,RIAGENDR,1 male; 2 female,Female equals 2
+NHANES,age,RIDAGEYR,years,Age 20 through 44
+NHANES,mec_status,RIDSTATR,categorical,Require Mobile Examination Center participation
+NHANES,race_ethnicity,RIDRETH3,categorical,Entered as a model factor
+NHANES,poverty_income_ratio,INDFMPIR,ratio,Continuous covariate
+NHANES,pregnancy,RIDEXPRG and RHD143,categorical,Require explicit not pregnant and exclude indeterminate status
+NHANES,breastfeeding,RHQ200,categorical,Exclude current breastfeeding
+NHANES,hysterectomy,RHD280,categorical,Require explicit no
+NHANES,bilateral_oophorectomy,RHQ305 and RHQ332,categorical/age,Exclude an affirmative report of removal of both ovaries
+NHANES,current_smoking,SMQ020 and SMQ040,binary,At least 100 lifetime cigarettes and now daily or some days
+NHANES,testosterone,LBXTST,ng/dL,Natural log then age residualization and weighted standardization
+NHANES,testosterone_si,LBDTSTSI,nmol/L,Used in free androgen index
+NHANES,androstenedione,LBXAND,ng/dL,Natural log then age residualization and weighted standardization
+NHANES,dheas,LBXDHE,micrograms/dL,Natural log then age residualization and weighted standardization
+NHANES,amh,LBXAMH,ng/mL,Natural log then age residualization and weighted standardization
+NHANES,shbg,LBXSHBG,nmol/L,Natural log then age residualization and weighted standardization
+NHANES,hba1c,LBXGH,percent,Weighted standardization
+NHANES,hdl,LBDHDD,mg/dL,Weighted standardization and sign inversion
+NHANES,triglycerides,LBXTLG or LBXTR,mg/dL,Natural log then weighted standardization
+NHANES,glucose,LBXGLU,mg/dL,Weighted standardization
+NHANES,insulin,LBXIN or LBDINSI,micro-international units/mL,Earlier-period SI values divided by 6
+NHANES,systolic_bp,BPXOSY1 to BPXOSY3,mmHg,Mean of available readings
+NHANES,diastolic_bp,BPXODI1 to BPXODI3,mmHg,Mean of available readings
+NHANES,bmi,BMXBMI,kg/m2,Adiposity sensitivity covariate
+NHANES,waist,BMXWAIST,cm,Adiposity sensitivity covariate
+NHANES,height,BMXHT,cm,Denominator of waist-to-height ratio
+NHANES,hormone_weight,WTPH2YR or WTTSTPP,survey weight,Period-specific hormone panel weight
+NHANES,fasting_weight,WTSAF2YR or WTSAFPRP,survey weight,Period-specific fasting subsample weight
+NHANES,stratum,SDMVSTRA,categorical,Complex-survey stratum
+NHANES,psu,SDMVPSU,categorical,Complex-survey primary sampling unit
+SWAN,all_variables,config/swan_variable_map.csv,user-defined,Restricted file is mapped locally and never committed

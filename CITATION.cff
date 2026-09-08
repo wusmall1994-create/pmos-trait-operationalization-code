@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release."
+title: "Statistical analysis code for PMOS-relevant androgen-AMH-metabolic trait operationalization"
+type: software
+version: 1.0.0
+date-released: 2026-09-08
+license: MIT
+authors:
+  - family-names: Wu
+    given-names: Xiaoxin
+  - family-names: Liu
+    given-names: Lirong
+  - family-names: Chen
+    given-names: Yuanying
+  - family-names: Liang
+    given-names: Huadong
+repository-code: "https://github.com/wusmall1994-create/pmos-trait-operationalization-code"
+keywords:
+  - NHANES
+  - SWAN
+  - androgen
+  - anti-Mullerian hormone
+  - survey analysis
+  - reproducible research
+

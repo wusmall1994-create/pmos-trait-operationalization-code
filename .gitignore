@@ -1,0 +1,28 @@
+# Data are downloaded or supplied locally and must never be committed.
+data/public/*
+!data/public/.gitkeep
+data/restricted/*
+!data/restricted/.gitkeep
+
+# Generated results are not part of this code-only release.
+outputs/*
+!outputs/.gitkeep
+
+# R and operating-system artifacts.
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/staging/
+*.Rproj
+.DS_Store
+Thumbs.db
+
+# Credentials and local configuration.
+.env
+*.token
+*.pem
+*.key
+config/local.*
+

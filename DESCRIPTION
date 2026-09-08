@@ -1,0 +1,31 @@
+Package: pmostraitcode
+Type: Project
+Title: Statistical Analysis Code for PMOS-Relevant Trait Operationalization
+Version: 1.0.0
+Authors@R: c(
+    person("Xiaoxin", "Wu", role = c("aut", "cre")),
+    person("Lirong", "Liu", role = "aut"),
+    person("Yuanying", "Chen", role = "aut"),
+    person("Huadong", "Liang", role = "aut")
+  )
+Description: Reproducible R code for survey-weighted analyses of androgen,
+    anti-Mullerian hormone, and metabolic traits in NHANES, with a local-only
+    interface for the restricted-redistribution SWAN public-use file.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.3.0)
+Imports:
+    digest,
+    dplyr,
+    ggplot2,
+    haven,
+    jsonlite,
+    lmtest,
+    readr,
+    sandwich,
+    survey,
+    tibble,
+    tidyr,
+    yaml
+Suggests:
+    testthat

@@ -1,0 +1,22 @@
+canonical,source,required,description
+age,,yes,Age in years
+race_ethnicity,,yes,Race or ethnicity category
+menopause_stage,,yes,Premenopausal or early perimenopausal stage
+current_smoking,,yes,Current smoking indicator
+reproductive_hormone_use,,yes,Current reproductive-hormone use indicator
+systemic_steroid_use,,yes,Current systemic-steroid use indicator
+testosterone,,yes,Total testosterone
+dheas,,yes,Dehydroepiandrosterone sulfate
+shbg,,yes,Sex hormone-binding globulin
+glucose,,yes,Fasting glucose in mg/dL
+insulin,,yes,Fasting insulin in micro-international units per mL
+triglycerides,,yes,Triglycerides in mg/dL
+hdl,,yes,HDL cholesterol in mg/dL
+hba1c,,no,Glycated hemoglobin percent if available
+systolic_bp,,yes,Systolic blood pressure
+diastolic_bp,,yes,Diastolic blood pressure
+waist_cm,,yes,Waist circumference in cm
+height_cm,,yes,Height in cm
+diabetes,,no,Diabetes indicator
+cycle_day,,no,Menstrual cycle day
+

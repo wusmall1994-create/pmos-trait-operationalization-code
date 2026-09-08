@@ -1,0 +1,11 @@
+discovery_cycle: "2021"
+replication_cycle: "2017"
+age_min: 20
+age_max: 44
+parallel_permutations: 500
+discordance_permutations: 1000
+pca_bootstrap_replicates: 1000
+seed_parallel: 42101
+seed_discordance: 42102
+seed_bootstrap: 42103
+
