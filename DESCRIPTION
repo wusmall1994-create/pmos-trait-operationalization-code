@@ -1,7 +1,7 @@
 Package: pmostraitcode
 Type: Project
 Title: Statistical Analysis Code for PMOS-Relevant Trait Operationalization
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person("Xiaoxin", "Wu", role = c("aut", "cre")),
     person("Lirong", "Liu", role = "aut"),
