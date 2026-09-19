@@ -24,6 +24,7 @@ message("Running common-sample construct analyses...")
 common <- prepare_common_sample(discovery)
 construct_matrix <- run_operationalization_matrix(common, root)
 incremental_fit <- run_incremental_fit(common, root)
+definition_replay <- run_definition_replay(common, root)
 pca <- run_weighted_pca(common, root, quick = quick)
 discordance <- run_discordance_benchmarks(discovery, root, quick = quick)
 
@@ -31,6 +32,12 @@ message("Preparing NHANES 2017-March 2020...")
 replication_data <- prepare_nhanes_period(root, "2017-2020")
 replication <- run_temporal_replication(replication_data, root)
 swan <- run_swan_models(root)
+if (nzchar(Sys.getenv("SWAN_DIR", unset = ""))) {
+  message("Running longitudinal SWAN analyses...")
+  source(file.path(root, "analysis", "run_swan_longitudinal_analysis.R"), local = new.env(parent = globalenv()))
+} else {
+  message("SWAN_DIR is not set; longitudinal SWAN analyses were skipped.")
+}
 make_code_release_figures(root)
 
 session <- capture.output(sessionInfo())

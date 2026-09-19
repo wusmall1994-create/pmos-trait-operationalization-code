@@ -5,10 +5,10 @@
 Archived release DOI: [10.5281/zenodo.22655208](https://doi.org/10.5281/zenodo.22655208).
 The concept DOI for all versions is [10.5281/zenodo.22655207](https://doi.org/10.5281/zenodo.22655207).
 
-This repository contains the statistical analysis code for a cross-sectional
-study of androgen, anti-Mullerian hormone (AMH), adiposity, and metabolic traits.
-It covers NHANES August 2021-August 2023, NHANES 2017-March 2020, and a
-local-only interface for the SWAN baseline public-use dataset.
+This repository contains the statistical analysis code for cross-sectional and
+longitudinal analyses of sex hormone-binding globulin (SHBG), androgen,
+anti-Mullerian hormone (AMH), adiposity, and metabolic traits. It covers NHANES
+August 2021-August 2023, NHANES 2017-March 2020, and repeated SWAN visits.
 
 ## Code-only release
 
@@ -56,15 +56,21 @@ The pipeline performs the following steps:
 1. downloads and checksum-records official NHANES XPT files;
 2. constructs the eligible analytic domains and derived traits;
 3. fits prespecified survey-weighted models and sensitivity analyses;
-4. evaluates alternative operational definitions and incremental fit;
+4. evaluates alternative operational definitions, replays eight
+   literature-aligned biochemical androgen definitions, and estimates
+   incremental fit;
 5. runs weighted PCA, within-PSU parallel analysis, bootstrap stability, and
    permutation-based discordance benchmarks;
 6. performs the earlier-NHANES comparison;
-7. runs SWAN models only when a local file and variable mapping are available.
+7. runs the optional SWAN baseline analysis when `SWAN_FILE` and its variable
+   mapping are available;
+8. runs optional longitudinal SWAN mixed models, mutually adjusted models,
+   medication and menopause-stage sensitivity analyses, continuous-time AR(1)
+   models, and next-visit models when `SWAN_DIR` is available.
 
 Generated files are written beneath `outputs/`, which is ignored by Git.
 
-## SWAN local setup
+## SWAN baseline setup
 
 Obtain ICPSR study 28762, version 5 under its applicable terms. Copy the
 baseline data file to `data/restricted/` and edit
@@ -73,6 +79,28 @@ column in the downloaded file. Set the environment variable `SWAN_FILE` to the
 local file path before running. The script accepts `.dta`, `.sav`, `.sas7bdat`,
 `.xpt`, `.rds`, or `.csv` files.
 
+## SWAN longitudinal setup
+
+Obtain the required SWAN public-use visit files directly from ICPSR under the
+applicable terms. Keep all `*-Data.dta` files outside version control and set
+`SWAN_DIR` to the directory containing them. From the repository root, run:
+
+```powershell
+Rscript --vanilla analysis/assess_swan_longitudinal.R
+Rscript --vanilla analysis/run_swan_longitudinal_analysis.R
+```
+
+The assessment script reports visit-level completeness and repeat-measurement
+eligibility. The longitudinal script performs visit-specific standardization,
+within-between decomposition, mixed-effects analyses, adiposity adjustment,
+mutually adjusted hormone models, sensitivity analyses, and exploratory
+next-visit models. Only aggregate tables and figures are written beneath the
+ignored `outputs/` directory; participant-level analytic data are not exported.
+
+The study-design figure can be regenerated with
+`analysis/build_study_design_figure.R`. Set `PMOS_FIGURE_DIR` to override its
+default destination under `outputs/figures`.
+
 ## Reproducibility notes
 
 - Survey designs are created before domain restriction.
@@ -80,8 +108,8 @@ local file path before running. The script accepts `.dta`, `.sav`, `.sas7bdat`,
 - Random procedures use fixed seeds from `config/analysis.yml`.
 - The NHANES validation test checks the published cohort milestones of 824
   strictly eligible women and 643 women in the fully adjusted discovery model.
-- SWAN code can be syntax-tested without the restricted file, but numerical
-  reproduction requires the independently obtained dataset.
+- SWAN code can be syntax-tested without restricted files, but numerical
+  reproduction requires the independently obtained visit datasets.
 
 ## Data access
 

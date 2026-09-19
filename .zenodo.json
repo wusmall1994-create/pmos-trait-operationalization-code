@@ -1,10 +1,10 @@
 {
-  "title": "Statistical analysis code for PMOS-relevant androgen-AMH-metabolic trait operationalization",
-  "description": "R code for complex-survey analyses in NHANES August 2021-August 2023, temporal comparison in NHANES 2017-March 2020, and a local-only SWAN analysis interface. No manuscript files, raw data, participant-level data, or personal contact information are included.",
+  "title": "Statistical analysis code for SHBG, androgen, AMH, and metabolic trait analyses",
+  "description": "R code for complex-survey NHANES analyses, literature-aligned biochemical androgen definition replay, temporal comparison, and baseline and longitudinal SWAN analyses using local restricted-redistribution files. No manuscript files, raw data, participant-level data, or personal contact information are included.",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "language": "eng",
   "creators": [
     {"name": "Wu, Xiaoxin"},
@@ -15,6 +15,8 @@
   "keywords": [
     "NHANES",
     "SWAN",
+    "longitudinal analysis",
+    "sex hormone-binding globulin",
     "androgen",
     "anti-Mullerian hormone",
     "survey analysis",
