@@ -1,8 +1,8 @@
 # PMOS trait operationalization: statistical analysis code
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22655208.svg)](https://doi.org/10.5281/zenodo.22655208)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22847160.svg)](https://doi.org/10.5281/zenodo.22847160)
 
-Archived release DOI: [10.5281/zenodo.22655208](https://doi.org/10.5281/zenodo.22655208).
+Archived release DOI: [10.5281/zenodo.22847160](https://doi.org/10.5281/zenodo.22847160).
 The concept DOI for all versions is [10.5281/zenodo.22655207](https://doi.org/10.5281/zenodo.22655207).
 
 This repository contains the statistical analysis code for cross-sectional and
