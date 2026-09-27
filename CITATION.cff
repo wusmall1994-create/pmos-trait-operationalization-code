@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the archived release."
 title: "Statistical analysis code for SHBG, androgen, AMH, and metabolic trait analyses"
 type: software
-version: 2.0.0
-date-released: 2026-09-19
-doi: 10.5281/zenodo.22847160
+version: 3.0.0
+date-released: 2026-09-27
+doi: 10.5281/zenodo.22655207
 license: MIT
 authors:
   - family-names: Wu

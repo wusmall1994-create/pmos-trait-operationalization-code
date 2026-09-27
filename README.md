@@ -66,7 +66,10 @@ The pipeline performs the following steps:
    mapping are available;
 8. runs optional longitudinal SWAN mixed models, mutually adjusted models,
    medication and menopause-stage sensitivity analyses, continuous-time AR(1)
-   models, and next-visit models when `SWAN_DIR` is available.
+   models, and next-visit models when `SWAN_DIR` is available;
+9. generates the aggregate analyses for Supplementary Tables S32-S37,
+   including extended adjustment, cohort comparison, missingness, participant
+   flow, visit contributions, and the two-fold SHBG interpretation.
 
 Generated files are written beneath `outputs/`, which is ignored by Git.
 
@@ -94,8 +97,10 @@ The assessment script reports visit-level completeness and repeat-measurement
 eligibility. The longitudinal script performs visit-specific standardization,
 within-between decomposition, mixed-effects analyses, adiposity adjustment,
 mutually adjusted hormone models, sensitivity analyses, and exploratory
-next-visit models. Only aggregate tables and figures are written beneath the
-ignored `outputs/` directory; participant-level analytic data are not exported.
+next-visit models. It then invokes `analysis/run_swan_reporting_extensions.R`
+to generate Supplementary Tables S32-S37. Only aggregate tables and figures
+are written beneath the ignored `outputs/` directory; participant-level
+analytic data are not exported.
 
 The study-design figure can be regenerated with
 `analysis/build_study_design_figure.R`. Set `PMOS_FIGURE_DIR` to override its

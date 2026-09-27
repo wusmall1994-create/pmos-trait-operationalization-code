@@ -314,6 +314,9 @@ write_csv(car1_models, file.path(output_dir, "car1_sensitivity_models.csv"))
 write_csv(lag_models, file.path(output_dir, "lagged_models.csv"))
 write_csv(visit_counts, file.path(output_dir, "analytic_visit_counts.csv"))
 
+# Generate aggregate manuscript-facing supplementary analyses (Tables S28-S37).
+source(file.path(root, "analysis", "run_swan_reporting_extensions.R"), local = environment())
+
 palette <- c(testosterone = "#4C78A8", dheas = "#8A6FB6", shbg = "#D55E5E", fai = "#2A9D8F")
 plot_data <- primary_models %>%
   filter(outcome == "metabolic_score", component == "within-person", stage %in% c("base", "bmi"), exposure != "fai") %>%
